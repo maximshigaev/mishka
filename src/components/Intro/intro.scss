@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.intro {
+  background-image: url($imagesPath + 'intro-background.png');
+  min-height: 373px;
+  background-position: 0 -17px;
+  padding-top: 71px;
+
+  &__title {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.11;
+    padding-left: 38px;
+    padding-right: 38px;
+    text-align: center;
+  }
+
+  &__assortment-list {
+    margin-top: 122px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.26;
+    color: #fff;
+  }
+
+  &__assortment-item {
+    padding-top: 26px;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    padding-right: 120px;
+    padding-bottom: 30px;
+
+    &--interior {
+      background-image: url($imagesPath + 'interior-icon.png');
+      background-color: #63d1bb;
+      background-position: 245px 23px;
+    }
+
+    &--toys {
+      background-image: url($imagesPath + 'toys-icon.png');
+      background-color: #56c3b2;
+      background-position: 234px 20px;
+    }
+  }
+}

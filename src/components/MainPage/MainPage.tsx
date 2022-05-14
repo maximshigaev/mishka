@@ -1,10 +1,16 @@
 import { FC } from 'react';
 
 // Components
-import { Header } from '../';
+import {
+  Header,
+  Intro,
+} from '../';
 
 export const MainPage: FC = () => (
   <>
     <Header />
+    <main>
+      <Intro />
+    </main>
   </>
 );

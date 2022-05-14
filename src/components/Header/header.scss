@@ -234,9 +234,9 @@
     }
   }
 
-  // &__cart-btn-text {
-  //   @include defaultHover;
-  // }
+  &__cart-btn-text {
+    @include defaultHover;
+  }
 
   &__search-btn {
     &::before {
