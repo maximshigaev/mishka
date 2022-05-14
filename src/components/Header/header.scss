@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .header {
   position: relative;
@@ -39,6 +40,8 @@
     display: inline-block;
     margin-bottom: 13px;
     margin-top: 22px;
+
+    @include defaultHover;
 
     @media (min-width: $tabletWidth) {
       align-self: start;
@@ -131,6 +134,8 @@
     padding-right: 20px;
     padding-left: 20px;
 
+    @include defaultHover;
+
     @media (min-width: $tabletWidth) {
       box-shadow: none;
       padding-left: 0;
@@ -187,11 +192,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 32px;
-      left: 32px;
-      width: 18px;
       height: 18px;
-      background-image: url($imagesPath + 'search-icon.png');
     }
   }
 
@@ -201,6 +202,19 @@
       left: 30px;
       width: 21px;
       background-image: url($imagesPath + 'cart-icon.png');
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url($imagesPath + 'cart-icon-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url($imagesPath + 'cart-icon-active.png');
+      }
     }
 
     @media (min-width: $tabletWidth) {
@@ -220,7 +234,31 @@
     }
   }
 
+  // &__cart-btn-text {
+  //   @include defaultHover;
+  // }
+
   &__search-btn {
+    &::before {
+      top: 32px;
+      left: 32px;
+      width: 18px;
+      background-image: url($imagesPath + 'search-icon.png');
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url($imagesPath + 'search-icon-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url($imagesPath + 'search-icon-active.png');
+      }
+    }
+
     @media (min-width: $tabletWidth) {
       order: 1;
       width: 84px;
@@ -269,6 +307,8 @@
 
   &__sub-nav-link {
     color: #000000;
+
+    @include defaultHover;
   }
 
   &__sub-nav-item {

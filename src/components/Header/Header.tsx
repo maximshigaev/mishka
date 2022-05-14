@@ -71,10 +71,22 @@ export const Header: FC = () => {
           </button>
           <ul className={navListClass}>
             <li className="header__nav-item">
-              <a className="header__nav-link" href="">Каталог товаров</a>
+              <a
+                className="header__nav-link"
+                title="Каталог товаров"
+                href=""
+              >
+                Каталог товаров
+              </a>
             </li>
             <li className="header__nav-item">
-              <a className="header__nav-link" href="">Вязание на заказ</a>
+              <a
+                className="header__nav-link"
+                title="Вязание на заказ"
+                href=""
+              >
+                Вязание на заказ
+              </a>
             </li>
           </ul>
           <div className={menuWrapperClass}>
@@ -85,14 +97,28 @@ export const Header: FC = () => {
             >
               <span className="header__search-btn-text">Поиск по сайту</span>
             </button>
-            <button className="header__cart-btn">Корзина: пока пуста</button>
+            <button className="header__cart-btn" title="Открыть корзину">
+              <span className="header__cart-btn-text">Корзина: пока пуста</span>
+            </button>
           </div>
           <ul className="header__sub-nav-list">
             <li className="header__sub-nav-item">
-              <a className="header__sub-nav-link" href="">Новые поступления</a>
+              <a
+                className="header__sub-nav-link"
+                href=""
+                title="Новые поступления"
+              >
+                Новые поступления
+              </a>
             </li>
             <li className="header__sub-nav-item">
-              <a className="header__sub-nav-link" href="">Распродажа</a>
+              <a
+                className="header__sub-nav-link"
+                href=""
+                title="Распродажа"
+              >
+                Распродажа
+              </a>
             </li>
           </ul>
           <p className="header__delivery">Бесплатная доставка по России</p>
