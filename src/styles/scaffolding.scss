@@ -68,10 +68,14 @@ button {
 .content-wrapper {
   margin: 0 auto;
   width: 320px;
-}
 
-@media (min-width: $tabletWidth) {
-  .content-wrapper {
+  @media (min-width: $tabletWidth) {
     width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    width: 1150px;
   }
 }

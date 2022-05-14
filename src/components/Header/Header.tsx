@@ -70,10 +70,10 @@ export const Header: FC = () => {
             </span>
           </button>
           <ul className={navListClass}>
-            <li>
+            <li className="header__nav-item">
               <a className="header__nav-link" href="">Каталог товаров</a>
             </li>
-            <li>
+            <li className="header__nav-item">
               <a className="header__nav-link" href="">Вязание на заказ</a>
             </li>
           </ul>
@@ -86,15 +86,15 @@ export const Header: FC = () => {
               <span className="header__search-btn-text">Поиск по сайту</span>
             </button>
             <button className="header__cart-btn">Корзина: пока пуста</button>
-            <ul className="header__sub-nav-list">
-              <li>
-                <a href="">Новые поступления</a>
-              </li>
-              <li>
-                <a href="">Распродажа</a>
-              </li>
-            </ul>
           </div>
+          <ul className="header__sub-nav-list">
+            <li className="header__sub-nav-item">
+              <a className="header__sub-nav-link" href="">Новые поступления</a>
+            </li>
+            <li className="header__sub-nav-item">
+              <a className="header__sub-nav-link" href="">Распродажа</a>
+            </li>
+          </ul>
           <p className="header__delivery">Бесплатная доставка по России</p>
         </nav>
       </header>
