@@ -1,10 +1,18 @@
 @import '../../styles/variables.scss';
 
 .intro {
-  background-image: url($imagesPath + 'intro-background.png');
+  background-image: url($imagesPath + 'intro-background-mobile.png');
   min-height: 373px;
   background-position: 0 -17px;
   padding-top: 71px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tabletWidth) {
+    padding-top: 153px;
+    background-image: url($imagesPath + 'intro-background-tablet.png');
+    background-position: -49px -3px;
+    min-height: 746px;
+  }
 
   &__title {
     font-size: 27px;
@@ -13,6 +21,10 @@
     padding-left: 38px;
     padding-right: 38px;
     text-align: center;
+
+    @media (min-width: $tabletWidth) {
+      font-size: 43px;
+    }
   }
 
   &__assortment-list {
@@ -21,6 +33,14 @@
     font-weight: bold;
     line-height: 1.26;
     color: #fff;
+
+    @media (min-width: $tabletWidth) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 376px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
 
   &__assortment-item {
@@ -30,16 +50,43 @@
     padding-right: 120px;
     padding-bottom: 30px;
 
+    @media (min-width: $tabletWidth) {
+      width: 50%;
+      padding-right: 130px;
+      padding-top: 29px;
+      padding-left: 36px;
+      padding-bottom: 40px;
+    }
+
     &--interior {
       background-image: url($imagesPath + 'interior-icon.png');
       background-color: #63d1bb;
       background-position: 245px 23px;
+
+      @media (min-width: $tabletWidth) {
+        background-image: url($imagesPath + 'wave-background.png'), url($imagesPath + 'interior-icon.png');
+        background-position: -10px bottom, 259px 30px;
+      }
     }
 
     &--toys {
       background-image: url($imagesPath + 'toys-icon.png');
       background-color: #56c3b2;
       background-position: 234px 20px;
+
+      @media (min-width: $tabletWidth) {
+        background-image: url($imagesPath + 'wave-background.png'), url($imagesPath + 'toys-icon.png');
+        background-position: 0px bottom, 240px 31px;
+      }
+    }
+  }
+
+  &__wrapper.content-wrapper {
+    background-color: rgb(249, 249, 249);
+    border-top: 1px solid #ececec;
+
+    @media (min-width: $tabletWidth) {
+      margin-top: -61px;
     }
   }
 }
