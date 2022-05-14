@@ -1,9 +1,10 @@
+@import '../../styles/variables.scss';
+
 .header {
   position: relative;
 
   &__navigation {
     text-align: center;
-    padding-top: 22px;
   }
 
   &__delivery {
@@ -19,6 +20,12 @@
   &__logo-link {
     display: inline-block;
     margin-bottom: 13px;
+    margin-top: 22px;
+  }
+
+  &__logo-image {
+    width: 86px;
+    height: 35px;
   }
 
   &__toggle-btn {
@@ -104,7 +111,7 @@
       left: 32px;
       width: 18px;
       height: 18px;
-      background-image: url('../../images/search-icon.png');
+      background-image: url($imagesPath + 'search-icon.png');
     }
   }
 
@@ -113,11 +120,106 @@
       top: 31px;
       left: 30px;
       width: 21px;
-      background-image: url('../../images/cart-icon.png');
+      background-image: url($imagesPath + 'cart-icon.png');
+    }
+  }
+
+  &__nav-list {
+    &--closed {
+      display: none;
     }
   }
 
   &__sub-nav-list {
     display: none;
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__logo-link {
+      align-self: start;
+    }
+
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 49px;
+      padding-right: 49px;
+      flex-wrap: wrap;
+    }
+
+    &__toggle-btn {
+      display: none;
+    }
+
+    &__logo-image {
+      width: 112px;
+      height: 46px;
+    }
+
+    &__menu-wrapper {
+      &--closed {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__search-btn {
+      order: 1;
+      width: 84px;
+      margin-left: auto;
+      box-shadow: 1px 0px 0 0 #ececec, inset 1px 0px 0 0 #ececec;
+      padding: 0;
+
+      &::before {
+        left: 33px;
+        top: 37px;
+      }
+    }
+
+    &__cart-btn {
+      order: 2;
+      width: 265px;
+      box-shadow: none;
+      padding-left: 82px;
+      padding-right: 0;
+      min-height: 88px;
+      font-size: 18px;
+      letter-spacing: 0.14px;
+
+      &::before {
+        left: 31px;
+        top: 35px;
+      }
+    }
+
+    &__nav-list {
+      order: 3;
+      width: 435px;
+
+      &--closed {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__nav-link {
+      box-shadow: none;
+      padding-left: 0;
+      font-size: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      line-height: 1.6;
+      padding-right: 37px;
+    }
+
+    &__search-btn-text {
+      display: none;
+    }
+
+    &__delivery {
+      display: block;
+      padding-top: 13px;
+      order: 4;
+    }
   }
 }

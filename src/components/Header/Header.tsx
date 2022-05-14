@@ -36,6 +36,10 @@ export const Header: FC = () => {
     'header__menu-wrapper--closed': !isMobileMenuOpened,
   });
 
+  const navListClass = cn('header__nav-list', {
+    'header__nav-list--closed': !isMobileMenuOpened,
+  });
+
   return (
     <div className="content-wrapper">
       <header className="header">
@@ -48,6 +52,7 @@ export const Header: FC = () => {
               <source media="(min-width: 1150px)" srcSet={logoDesktop} />
               <source media="(min-width: 768px)" srcSet={logoTablet} />
               <img
+                className="header__logo-image"
                 src={logoMobile}
                 alt="Логотип Mishka"
                 width="86"
@@ -64,17 +69,21 @@ export const Header: FC = () => {
               {`${isMobileMenuOpened ? 'Закрыть' : 'Открыть'} меню`}
             </span>
           </button>
+          <ul className={navListClass}>
+            <li>
+              <a className="header__nav-link" href="">Каталог товаров</a>
+            </li>
+            <li>
+              <a className="header__nav-link" href="">Вязание на заказ</a>
+            </li>
+          </ul>
           <div className={menuWrapperClass}>
-            <ul>
-              <li>
-                <a className="header__nav-link" href="">Каталог товаров</a>
-              </li>
-              <li>
-                <a className="header__nav-link" href="">Вязание на заказ</a>
-              </li>
-            </ul>
-            <button className="header__search-btn" title="Поиск по сайту">
-              <span>Поиск по сайту</span>
+            <button
+              className="header__search-btn"
+              title="Поиск по сайту"
+              area-label="Поиск по сайту"
+            >
+              <span className="header__search-btn-text">Поиск по сайту</span>
             </button>
             <button className="header__cart-btn">Корзина: пока пуста</button>
             <ul className="header__sub-nav-list">
@@ -86,8 +95,8 @@ export const Header: FC = () => {
               </li>
             </ul>
           </div>
+          <p className="header__delivery">Бесплатная доставка по России</p>
         </nav>
-        <p className="header__delivery">Бесплатная доставка по России</p>
       </header>
     </div>
   );

@@ -69,3 +69,9 @@ button {
   margin: 0 auto;
   width: 320px;
 }
+
+@media (min-width: $tabletWidth) {
+  .content-wrapper {
+    width: 768px;
+  }
+}
