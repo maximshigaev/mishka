@@ -25,20 +25,22 @@ export const TopOffer: FC = () => (
         <dt className="top-offer__term">Высота:</dt>
         <dd className="top-offer__description">15 см</dd>
       </dl>
-      <picture>
-        <source media="(min-width: 1150px)" srcSet={topOfferDesktop} />
-        <source media="(min-width: 768px)" srcSet={topOfferTablet} />
-        <img
-          className="top-offer__image"
-          src={topOfferMobile}
-          alt="Вязаные корзинки"
-          width="260"
-          height="315"
-          title="Вязаные корзинки"
-        />
-      </picture>
+      <div className="top-offer__image-wrapper">
+        <picture>
+          <source media="(min-width: 1150px)" srcSet={topOfferDesktop} />
+          <source media="(min-width: 768px)" srcSet={topOfferTablet} />
+          <img
+            className="top-offer__image"
+            src={topOfferMobile}
+            alt="Вязаные корзинки"
+            width="260"
+            height="315"
+            title="Вязаные корзинки"
+          />
+        </picture>
+      </div>
       <p className="top-offer__price">Цена: 990 руб.</p>
-      <button className="button" title="Заказать">Заказать</button>
+      <button className="button top-offer__button" title="Заказать">Заказать</button>
     </section>
   </div>
 );

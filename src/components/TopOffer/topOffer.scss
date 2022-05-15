@@ -6,10 +6,30 @@
   padding-top: 27px;
   padding-bottom: 40px;
 
+  @media (min-width: $tabletWidth) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 32px;
+    padding-bottom: 68px;
+    display: grid;
+    grid-template-areas: "title title hint"
+      "info image image"
+      "list image image"
+      "price image image"
+      "button image image";
+    grid-template-columns: 335px 209px 124px;
+    grid-template-rows: 108px 122px 158px 72px 52px;
+  }
+
   &__title {
     font-size: 25px;
     font-weight: 700;
     line-height: 1.2;
+
+    @media (min-width: $tabletWidth) {
+      font-size: 43px;
+      grid-area: title;
+    }
   }
 
   &__hint {
@@ -18,11 +38,27 @@
     font-weight: 700;
     line-height: 1.18;
     color: #63d1bb;
+
+    @media (min-width: $tabletWidth) {
+      margin-top: 11px;
+      text-align: center;
+      grid-area: hint;
+      line-height: 1;
+    }
   }
 
   &__info {
     padding-top: 18px;
     line-height: 1.6;
+
+    @media (min-width: $tabletWidth) {
+      font-size: 17px;
+      padding-top: 0;
+      grid-area: info;
+      margin-top: -8px;
+      padding-right: 40px;
+      line-height: 1.76;
+    }
   }
 
   &__term,
@@ -40,16 +76,38 @@
   &__description {
     width: 190px;
     padding-left: 30px;
+
+    @media (min-width: $tabletWidth) {
+      padding-left: 26px;
+      width: 220px;
+    }
   }
 
   &__list {
     padding-top: 22px;
     padding-bottom: 24px;
+
+    @media (min-width: $tabletWidth) {
+      grid-area: list;
+      padding-top: 0;
+    }
   }
 
   &__image {
     width: 260px;
     height: 315px;
+
+    @media (min-width: $tabletWidth) {
+      width: 333px;
+      height: 404px;
+    }
+  }
+
+  &__image-wrapper {
+    @media (min-width: $tabletWidth) {
+      width: 333px;
+      height: 404px;
+    }
   }
 
   &__price {
@@ -59,11 +117,30 @@
     line-height: 1.41;
     padding-top: 15px;
     padding-bottom: 24px;
+
+    @media (min-width: $tabletWidth) {
+      grid-area: price;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-right: 50px;
+    }
+  }
+
+  &__button.button {
+    @media (min-width: $tabletWidth) {
+      grid-area: button;
+      margin-right: 44px;
+      width: auto;
+    }
   }
 
   &__wrapper {
     background-image: url($imagesPath + 'delimiter-mobile.png');
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media (min-width: $tabletWidth) {
+      background-image: url($imagesPath + 'delimiter-tablet.png');
+    }
   }
 }
