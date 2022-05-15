@@ -103,7 +103,7 @@
         background-position: 0px bottom, 240px 31px;
       }
 
-      @media (min-width: $tabletWidth) {
+      @media (min-width: $desktopWidth) {
         background-image: url($imagesPath + 'wave-background-desktop.png'), url($imagesPath + 'toys-icon.png');
         background-position: 0px bottom, 431px 31px;
       }

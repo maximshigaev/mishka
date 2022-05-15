@@ -79,3 +79,16 @@ button {
     width: 1150px;
   }
 }
+
+.button {
+  font: inherit;
+  background-color: transparent;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.18;
+  border: 2px solid $mainTextColor;
+  padding: 13px 20px;
+  padding-bottom: 15px;
+}

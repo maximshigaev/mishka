@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+
+.top-offer {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 27px;
+  padding-bottom: 40px;
+
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__hint {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: #63d1bb;
+  }
+
+  &__info {
+    padding-top: 18px;
+    line-height: 1.6;
+  }
+
+  &__term,
+  &__description {
+    display: inline-block;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+  }
+
+  &__term {
+    width: 70px;
+  }
+
+  &__description {
+    width: 190px;
+    padding-left: 30px;
+  }
+
+  &__list {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  &__image {
+    width: 260px;
+    height: 315px;
+  }
+
+  &__price {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.41;
+    padding-top: 15px;
+    padding-bottom: 24px;
+  }
+
+  &__wrapper {
+    background-image: url($imagesPath + 'delimiter-mobile.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}

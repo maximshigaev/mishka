@@ -4,6 +4,7 @@ import { FC } from 'react';
 import {
   Header,
   Intro,
+  TopOffer,
 } from '../';
 
 export const MainPage: FC = () => (
@@ -11,6 +12,7 @@ export const MainPage: FC = () => (
     <Header />
     <main>
       <Intro />
+      <TopOffer />
     </main>
   </>
 );
