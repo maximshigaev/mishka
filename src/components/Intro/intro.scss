@@ -14,6 +14,11 @@
     min-height: 746px;
   }
 
+  @media (min-width: $desktopWidth) {
+    padding-top: 152px;
+    background-position: 142px -2px;
+  }
+
   &__title {
     font-size: 27px;
     font-weight: bold;
@@ -24,6 +29,11 @@
 
     @media (min-width: $tabletWidth) {
       font-size: 43px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      font-size: 53px;
+      line-height: 1.08;
     }
   }
 
@@ -40,6 +50,10 @@
       margin-top: 376px;
       font-size: 20px;
       line-height: 1.5;
+    }
+
+    @media (min-width: $desktopWidth) {
+      margin-top: 359px;
     }
   }
 
@@ -58,14 +72,24 @@
       padding-bottom: 40px;
     }
 
+    @media (min-width: $desktopWidth) {
+      padding-bottom: 46px;
+      padding-right: 305px;
+    }
+
     &--interior {
       background-image: url($imagesPath + 'interior-icon.png');
       background-color: #63d1bb;
       background-position: 245px 23px;
 
       @media (min-width: $tabletWidth) {
-        background-image: url($imagesPath + 'wave-background.png'), url($imagesPath + 'interior-icon.png');
+        background-image: url($imagesPath + 'wave-background-tablet.png'), url($imagesPath + 'interior-icon.png');
         background-position: -10px bottom, 259px 30px;
+      }
+
+      @media (min-width: $desktopWidth) {
+        background-image: url($imagesPath + 'wave-background-desktop.png'), url($imagesPath + 'interior-icon.png');
+        background-position: -36px bottom, 450px 30px;
       }
     }
 
@@ -75,8 +99,13 @@
       background-position: 234px 20px;
 
       @media (min-width: $tabletWidth) {
-        background-image: url($imagesPath + 'wave-background.png'), url($imagesPath + 'toys-icon.png');
+        background-image: url($imagesPath + 'wave-background-tablet.png'), url($imagesPath + 'toys-icon.png');
         background-position: 0px bottom, 240px 31px;
+      }
+
+      @media (min-width: $tabletWidth) {
+        background-image: url($imagesPath + 'wave-background-desktop.png'), url($imagesPath + 'toys-icon.png');
+        background-position: 0px bottom, 431px 31px;
       }
     }
   }
@@ -87,6 +116,10 @@
 
     @media (min-width: $tabletWidth) {
       margin-top: -61px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      margin-top: -45px;
     }
   }
 }
