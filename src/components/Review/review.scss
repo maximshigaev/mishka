@@ -18,6 +18,11 @@
       font-size: 18px;
       padding-top: 57px;
     }
+
+    @media (min-width: $desktopWidth) {
+      font-size: 17px;
+      padding-top: 40px;
+    }
   }
 
   &__link {

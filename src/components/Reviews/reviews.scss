@@ -21,6 +21,14 @@
     grid-template-rows: 131px 238px 122px;
   }
 
+  @media (min-width: $desktopWidth) {
+    background-image: url($imagesPath +'reviews-background.png'), url($imagesPath + 'delimiter-desktop.png');
+    margin-top: 60px;
+    padding-left: 170px;
+    grid-template-columns: 305px 400px 175px;
+    grid-template-rows: 131px 189px 177px;
+  }
+
   &__title {
     font-size: 25px;
     font-weight: 700;
@@ -35,6 +43,12 @@
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
+
+    @media (min-width: $desktopWidth) {
+      font-size: 53px;
+      line-height: 1.08;
+      padding-top: 70px;
+    }
   }
 
   &__list {
@@ -43,6 +57,12 @@
       padding-top: 45px;
       grid-column: 1 / -1;
       grid-row: 2 / -1;
+    }
+
+    @media (min-width: $tabletWidth) {
+      padding-right: 105px;
+      padding-left: 4px;
+      letter-spacing: 0.03px;
     }
   }
 
@@ -101,6 +121,11 @@
     @media (min-width: $tabletWidth) {
       padding-left: 0;
       padding-right: 0;
+    }
+
+    @media (min-width: $tabletWidth) {
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 }
