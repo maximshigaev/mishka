@@ -5,6 +5,7 @@ import {
   Header,
   Intro,
   TopOffer,
+  Advantages,
 } from '../';
 
 export const MainPage: FC = () => (
@@ -13,6 +14,7 @@ export const MainPage: FC = () => (
     <main>
       <Intro />
       <TopOffer />
+      <Advantages />
     </main>
   </>
 );

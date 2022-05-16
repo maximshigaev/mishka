@@ -1,0 +1,89 @@
+@import '../../styles/variables.scss';
+
+.advantages {
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #000000;
+
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-top: 29px;
+  }
+
+  &__list {
+    padding-top: 32px;
+  }
+
+  &__item {
+    padding-top: 53px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    line-height: 1.18;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+
+    &--materials {
+      &::before {
+        width: 32px;
+        height: 37px;
+        left: 8px;
+        background-image: url($imagesPath + "materials-icon.png");
+      }
+    }
+
+    &--style {
+      &::before {
+        width: 47px;
+        height: 27px;
+        background-image: url($imagesPath + "style-icon.png");
+      }
+    }
+
+    &--likes {
+      &::before {
+        width: 34px;
+        height: 27px;
+        top: 5px;
+        left: 7px;
+        background-image: url($imagesPath + "likes-icon.png");
+      }
+    }
+
+    &--love {
+      &::before {
+        width: 35px;
+        height: 34px;
+        top: 2px;
+        left: 3px;
+        background-image: url($imagesPath + "love-icon.png");
+      }
+    }
+
+    &--support {
+      &::before {
+        width: 55px;
+        height: 23px;
+        top: 3px;
+        left: -6px;
+        background-image: url($imagesPath + "support-icon.png");
+      }
+    }
+
+    &--package {
+      &::before {
+        width: 33px;
+        height: 32px;
+        left: 3px;
+        background-image: url($imagesPath + "package-icon.png");
+      }
+    }
+  }
+}
