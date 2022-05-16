@@ -10,6 +10,11 @@
     padding-right: 0;
   }
 
+  @media (min-width: $tabletWidth) {
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+
   &__title {
     font-size: 25px;
     font-weight: 700;
@@ -21,6 +26,12 @@
       padding-top: 49px;
       line-height: 1.16;
     }
+
+    @media (min-width: $desktopWidth) {
+      font-size: 53px;
+      line-height: 1.08;
+      padding-top: 60px;
+    }
   }
 
   &__list {
@@ -30,6 +41,10 @@
       display: flex;
       flex-wrap: wrap;
       padding-top: 21px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      padding-left: 4px;
     }
   }
 
