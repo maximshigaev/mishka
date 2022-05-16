@@ -63,12 +63,10 @@ export const Header: FC = () => {
           </Link>
           <button
             className={toggleBtnClass}
+            area-label={`${isMobileMenuOpened ? 'Закрыть' : 'Открыть'} меню`}
+
             onClick={handleToggleBtnClick}
-          >
-            <span className="visually-hidden">
-              {`${isMobileMenuOpened ? 'Закрыть' : 'Открыть'} меню`}
-            </span>
-          </button>
+          />
           <ul className={navListClass}>
             <li className="header__nav-item">
               <a

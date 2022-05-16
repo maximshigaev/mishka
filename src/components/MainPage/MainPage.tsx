@@ -6,6 +6,7 @@ import {
   Intro,
   TopOffer,
   Advantages,
+  Reviews,
 } from '../';
 
 export const MainPage: FC = () => (
@@ -15,6 +16,7 @@ export const MainPage: FC = () => (
       <Intro />
       <TopOffer />
       <Advantages />
+      <Reviews />
     </main>
   </>
 );
