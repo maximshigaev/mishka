@@ -1,4 +1,11 @@
+@import '../../styles/variables.scss';
+
 .review {
+  &__text {
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
   &__author {
     font-size: 17px;
     font-weight: 700;
@@ -6,10 +13,20 @@
     color: #000000;
     display: block;
     padding-top: 26px;
+
+    @media (min-width: $tabletWidth) {
+      font-size: 18px;
+      padding-top: 57px;
+    }
   }
 
   &__link {
     font-size: 17px;
     line-height: 1.76;
+
+    @media (min-width: $tabletWidth) {
+      padding-top: 2px;
+      display: block;
+    }
   }
 }

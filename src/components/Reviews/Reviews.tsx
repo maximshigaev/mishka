@@ -20,10 +20,10 @@ export const Reviews: FC = () => {
   const handleNextBtnClick = useCallback(() => setCurrentReviewId(currentReviewId + 1), [currentReviewId]);
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper reviews__wrapper">
       <section className="reviews">
         <h2 className="reviews__title">Отзывы</h2>
-        <ul>
+        <ul className="reviews__list">
           {reviews.map((review) => (
             <li key={review.id}>
               <Review
@@ -33,21 +33,23 @@ export const Reviews: FC = () => {
             </li>
           ))}
         </ul>
-        <button
-          className="reviews__button reviews__button--prev"
-          title="Предыдущий отзыв"
-          area-label="Предыдущий отзыв"
-          disabled={currentReviewId === 0}
-          onClick={handlePrevBtnClick}
-        />
-        <button
-          className="reviews__button reviews__button--next"
-          title="Слудующий отзыв"
-          area-label="Следующий отзыв"
-          disabled={currentReviewId === reviews.length}
-          onClick={handleNextBtnClick}
-        />
-        <button className="button">Написать</button>
+        <div className="reviews__button-container">
+          <button
+            className="reviews__button reviews__button--prev"
+            title="Предыдущий отзыв"
+            area-label="Предыдущий отзыв"
+            disabled={currentReviewId === 1}
+            onClick={handlePrevBtnClick}
+          />
+          <button
+            className="reviews__button reviews__button--next"
+            title="Слудующий отзыв"
+            area-label="Следующий отзыв"
+            disabled={currentReviewId === reviews.length}
+            onClick={handleNextBtnClick}
+          />
+        </div>
+        <button className="button reviews__write-btn">Написать</button>
       </section>
     </div>
   );

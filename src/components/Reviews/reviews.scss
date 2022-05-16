@@ -9,12 +9,41 @@
   background-repeat: no-repeat;
   background-position: bottom;
 
+  @media (min-width: $tabletWidth) {
+    background-image: url($imagesPath +'reviews-background.png'), url($imagesPath + 'delimiter-tablet.png');
+    margin-top: 53px;
+    background-position: top left, bottom;
+    padding-top: 0;
+    padding-left: 45px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 305px 193px 175px;
+    grid-template-rows: 131px 238px 122px;
+  }
+
   &__title {
     font-size: 25px;
     font-weight: 700;
     line-height: 1.2;
     color: #000000;
     padding-bottom: 25px;
+
+    @media (min-width: $tabletWidth) {
+      font-size: 43px;
+      padding-top: 75px;
+      padding-bottom: 48px;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__list {
+    @media (min-width: $tabletWidth) {
+      padding-left: 3px;
+      padding-top: 45px;
+      grid-column: 1 / -1;
+      grid-row: 2 / -1;
+    }
   }
 
   &__button {
@@ -37,6 +66,41 @@
 
     &--next {
       background-image: url($imagesPath + 'arrow-right.png');
+    }
+
+    @media (min-width: $tabletWidth) {
+      margin-top: 0;
+      width: 50px;
+      border: none;
+      height: 26px;
+
+      &--prev {
+        margin-right: 38px;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__button-container {
+    @media (min-width: $tabletWidth) {
+      grid-column: 3 / -1;
+      grid-row: 3 / -1;
+      margin-bottom: auto;
+    }
+  }
+
+  &__write-btn {
+    @media (min-width: $tabletWidth) {
+      grid-column: 3 / -1;
+      grid-row: 1 / 2;
+      margin-top: auto;
+    }
+  }
+
+  &__wrapper.content-wrapper {
+    @media (min-width: $tabletWidth) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
