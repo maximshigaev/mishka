@@ -91,4 +91,14 @@ button {
   border: 2px solid $mainTextColor;
   padding: 13px 20px;
   padding-bottom: 15px;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

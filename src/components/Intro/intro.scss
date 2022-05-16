@@ -58,14 +58,45 @@
   }
 
   &__assortment-item {
+    @media (min-width: $tabletWidth) {
+      width: 50%;
+    }
+  }
+
+  &__assortment-link {
     padding-top: 26px;
     padding-left: 28px;
     background-repeat: no-repeat;
     padding-right: 120px;
     padding-bottom: 30px;
+    display: block;
+    color: inherit;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+
+      &::before {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
 
     @media (min-width: $tabletWidth) {
-      width: 50%;
       padding-right: 130px;
       padding-top: 29px;
       padding-left: 36px;
@@ -78,34 +109,55 @@
     }
 
     &--interior {
-      background-image: url($imagesPath + 'interior-icon.png');
       background-color: #63d1bb;
-      background-position: 245px 23px;
+
+      &::before {
+        width: 40px;
+        height: 62px;
+        top: 23px;
+        right: 36px;
+        background-image: url($imagesPath + 'interior-icon.png');
+      }
 
       @media (min-width: $tabletWidth) {
-        background-image: url($imagesPath + 'wave-background-tablet.png'), url($imagesPath + 'interior-icon.png');
-        background-position: -10px bottom, 259px 30px;
+        background-image: url($imagesPath + 'wave-background-tablet.png');
+        background-position: -10px 106px;
+
+        &::before {
+          top: 30px;
+        }
       }
 
       @media (min-width: $desktopWidth) {
-        background-image: url($imagesPath + 'wave-background-desktop.png'), url($imagesPath + 'interior-icon.png');
-        background-position: -36px bottom, 450px 30px;
+        background-image: url($imagesPath + 'wave-background-desktop.png');
+        background-position: -36px bottom;
       }
     }
 
     &--toys {
-      background-image: url($imagesPath + 'toys-icon.png');
       background-color: #56c3b2;
-      background-position: 234px 20px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        top: 21px;
+        right: 27px;
+        background-image: url($imagesPath + 'toys-icon.png');
+      }
 
       @media (min-width: $tabletWidth) {
-        background-image: url($imagesPath + 'wave-background-tablet.png'), url($imagesPath + 'toys-icon.png');
-        background-position: 0px bottom, 240px 31px;
+        background-image: url($imagesPath + 'wave-background-tablet.png');
+        background-position: 0px 106px;
+
+        &::before {
+          top: 32px;
+          right: 35px;
+        }
       }
 
       @media (min-width: $desktopWidth) {
-        background-image: url($imagesPath + 'wave-background-desktop.png'), url($imagesPath + 'toys-icon.png');
-        background-position: 0px bottom, 431px 31px;
+        background-image: url($imagesPath + 'wave-background-desktop.png');
+        background-position: 0px bottom;
       }
     }
   }
