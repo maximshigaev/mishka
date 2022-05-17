@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .reviews {
   padding-top: 23px;
@@ -75,9 +76,15 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 37px;
+    cursor: pointer;
 
     &:disabled {
       opacity: 0.3;
+      cursor: default;
+    }
+
+    &:not(:disabled) {
+      @include defaultHover;
     }
 
     &--prev {
