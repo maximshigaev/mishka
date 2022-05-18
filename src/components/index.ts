@@ -6,3 +6,4 @@ export { TopOffer } from './TopOffer/TopOffer';
 export { Advantages } from './Advantages/Advantages';
 export { Reviews } from './Reviews/Reviews';
 export { Review } from './Review/Review';
+export { Contacts } from './Contacts/Contacts';

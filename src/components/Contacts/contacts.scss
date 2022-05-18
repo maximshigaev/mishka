@@ -1,0 +1,44 @@
+.contacts {
+  &__title {
+    padding-left: 29px;
+    padding-right: 29px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.67;
+    color: #000;
+    padding-top: 36px;
+  }
+
+  &__term {
+    padding-left: 30px;
+    padding-top: 27px;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 29px;
+  }
+
+  &__description {
+    display: inline-block;
+    padding-top: 27px;
+    padding-right: 30px;
+    width: 178px;
+
+    &--email {
+      border-bottom: 1px solid rgb(98, 209, 186);
+    }
+  }
+
+  &__map {
+    width: 320px;
+    height: 457px;
+    margin-top: 36px;
+    margin-bottom: 31px;
+  }
+
+  &__button.button {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 260px;
+    margin-bottom: 39px;
+  }
+}
