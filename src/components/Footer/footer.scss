@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: rgb(241, 241, 241);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 23px;
+
+  &__logo-link {
+    display: none;
+  }
+
+  &__social-list {
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgb(229, 229, 229);
+  }
+
+  &__social-link {
+    display: block;
+
+    &--instagram {
+      width: 22px;
+      height: 21px;
+      background-image: url($imagesPath + 'instagram-icon.png');
+    }
+
+    &--facebook {
+      width: 15px;
+      height: 28px;
+      background-image: url($imagesPath + 'facebook-icon.png');
+    }
+
+    &--twitter {
+      width: 23px;
+      height: 20px;
+      background-image: url($imagesPath + 'twitter-icon.png');
+    }
+  }
+
+  &__copyright {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 28px;
+    color: #000000;
+  }
+
+  &__copyright-link {
+    width: 27px;
+    height: 34px;
+    background-image: url($imagesPath +'htmlacademy-icon.png');
+    display: inline-block;
+  }
+}
