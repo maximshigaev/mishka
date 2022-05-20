@@ -7,9 +7,16 @@ export const Contacts: FC = () => (
   <div className="content-wrapper contacts__wrapper">
     <section className="contacts">
       <h2 className="contacts__title">Контакты</h2>
-      <dl>
+      <dl className="contacts__list">
         <dt className="contacts__term">e-mail:</dt>
-        <dd className="contacts__description contacts__description--email">info@mimimishkashop.ru</dd>
+        <dd className="contacts__description contacts__description--email">
+          <a
+            className="contacts__description-link"
+            href="mailto:vlad@htmlbook.ru"
+          >
+            info@mimimishkashop.ru
+          </a>
+        </dd>
         <dt className="contacts__term">адрес:</dt>
         <dd className="contacts__description  contacts__description--address">
           г. Санкт-Петербург, <br className="contacts__tablet-break" /> ул. Большая Конюшенная, <br /> д. 19/8, офис 101

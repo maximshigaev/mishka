@@ -15,6 +15,21 @@
     }
   }
 
+  @media (min-width: $desktopWidth) {
+    display: grid;
+    grid-template-areas: "title map"
+      "list map"
+      "button map";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 256px 52px;
+    padding-bottom: 105px;
+
+    &::before {
+      top: 133px;
+      left: 64px;
+    }
+  }
+
   &__title {
     padding-left: 29px;
     padding-right: 29px;
@@ -30,6 +45,20 @@
       padding-top: 60px;
       padding-right: 140px;
       padding-left: 46px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      grid-area: title;
+      font-size: 53px;
+      padding-left: 169px;
+      padding-top: 140px;
+      padding-right: 50px;
+    }
+  }
+
+  &__list {
+    @media (min-width: $desktopWidth) {
+      grid-area: list;
     }
   }
 
@@ -47,6 +76,11 @@
       padding-left: 50px;
       padding-right: 26px;
     }
+
+    @media (min-width: $desktopWidth) {
+      padding-left: 175px;
+      padding-top: 28px;
+    }
   }
 
   &__description {
@@ -62,9 +96,11 @@
       vertical-align: top;
     }
 
-    &--email {
-      border-bottom: 1px solid rgb(98, 209, 186);
+    @media (min-width: $desktopWidth) {
+      padding-top: 28px;
+    }
 
+    &--email {
       @media (min-width: $tabletWidth) {
         margin-right: 0;
       }
@@ -75,6 +111,10 @@
 
       @media (min-width: $tabletWidth) {
         width: 255px;
+      }
+
+      @media (min-width: $desktopWidth) {
+        margin-right: 0;
       }
     }
   }
@@ -90,6 +130,12 @@
       margin-top: 57px;
       margin-bottom: 45px;
     }
+
+    @media (min-width: $desktopWidth) {
+      grid-area: map;
+      width: 525px;
+      margin-top: 71px;
+    }
   }
 
   &__button.button {
@@ -104,12 +150,23 @@
       width: 230px;
       display: block;
     }
+
+    @media (min-width: $desktopWidth) {
+      grid-area: button;
+      margin: 0;
+      margin-left: 175px;
+    }
   }
 
   &__wrapper.content-wrapper {
     @media (min-width: $tabletWidth) {
       padding-left: 0px;
       padding-right: 0px;
+    }
+
+    @media (min-width: $desktopWidth) {
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 
@@ -118,6 +175,19 @@
 
     @media (min-width: $tabletWidth) {
       display: inline;
+    }
+  }
+
+  &__description-link {
+    border-bottom: 1px solid rgb(98, 209, 186);
+
+    &:hover,
+    &:focus {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
