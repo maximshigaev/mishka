@@ -4,14 +4,16 @@ import { FC } from 'react';
 import './contacts.scss';
 
 export const Contacts: FC = () => (
-  <div className="content-wrapper">
-    <section>
+  <div className="content-wrapper contacts__wrapper">
+    <section className="contacts">
       <h2 className="contacts__title">Контакты</h2>
       <dl>
         <dt className="contacts__term">e-mail:</dt>
         <dd className="contacts__description contacts__description--email">info@mimimishkashop.ru</dd>
         <dt className="contacts__term">адрес:</dt>
-        <dd className="contacts__description">г. Санкт-Петербург, ул. Большая Конюшенная, <br /> д. 19/8, офис 101</dd>
+        <dd className="contacts__description  contacts__description--address">
+          г. Санкт-Петербург, <br className="contacts__tablet-break" /> ул. Большая Конюшенная, <br /> д. 19/8, офис 101
+        </dd>
       </dl>
       <iframe
         className="contacts__map"

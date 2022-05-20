@@ -60,7 +60,7 @@
       grid-row: 2 / -1;
     }
 
-    @media (min-width: $tabletWidth) {
+    @media (min-width: $desktopWidth) {
       padding-right: 105px;
       padding-left: 4px;
       letter-spacing: 0.03px;
@@ -130,7 +130,7 @@
       padding-right: 0;
     }
 
-    @media (min-width: $tabletWidth) {
+    @media (min-width: $desktopWidth) {
       padding-left: 50px;
       padding-right: 50px;
     }
